@@ -1,0 +1,23 @@
+services:
+  mermaid-visualizer:
+    build:
+      context: ./Services/MermaidVisualizer
+      dockerfile: Dockerfile
+    container_name: mermaid-visualizer
+    restart: unless-stopped
+    ports:
+      - "${MERMAID_PORT:-3000}:3000"
+    environment:
+      - NODE_ENV=production
+
+  # ─────────────────────────────────────────────
+  # Add new services below as submodules are added
+  # ─────────────────────────────────────────────
+  # example-service:
+  #   build:
+  #     context: ./Services/ExampleService
+  #     dockerfile: Dockerfile
+  #   container_name: example-service
+  #   restart: unless-stopped
+  #   ports:
+  #     - "${EXAMPLE_PORT:-8080}:8080"

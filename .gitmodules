@@ -1,0 +1,3 @@
+[submodule "Services/MermaidVisualizer"]
+	path = Services/MermaidVisualizer
+	url = https://github.com/PedroVMota/mermaid-tunner
