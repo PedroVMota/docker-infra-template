@@ -1,7 +1,7 @@
 services:
   mermaid-visualizer:
     build:
-      context: ./Services/MermaidVisualizer
+      context: ./Services/web/MermaidVisualizer
       dockerfile: Dockerfile
     container_name: mermaid-visualizer
     restart: unless-stopped

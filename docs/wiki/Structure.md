@@ -10,9 +10,9 @@ docker-infra-template/
 ├── .github/workflows/wiki.yml
 ├── docs/wiki/                  # source of truth for GitHub Wiki
 └── Services/
-    ├── MermaidVisualizer/      # → github.com/PedroVMota/mermaid-tunner
-    ├── api/
     ├── web/
+    │   └── MermaidVisualizer/  # → github.com/PedroVMota/mermaid-tunner
+    ├── api/
     ├── worker/
     └── gateway/
 ```
