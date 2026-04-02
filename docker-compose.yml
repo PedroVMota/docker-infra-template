@@ -10,14 +10,36 @@ services:
     environment:
       - NODE_ENV=production
 
-  # ─────────────────────────────────────────────
-  # Add new services below as submodules are added
-  # ─────────────────────────────────────────────
-  # example-service:
+  # api:
   #   build:
-  #     context: ./Services/ExampleService
+  #     context: ./Services/api
   #     dockerfile: Dockerfile
-  #   container_name: example-service
+  #   container_name: api
   #   restart: unless-stopped
   #   ports:
-  #     - "${EXAMPLE_PORT:-8080}:8080"
+  #     - "${API_PORT:-8080}:8080"
+
+  # web:
+  #   build:
+  #     context: ./Services/web
+  #     dockerfile: Dockerfile
+  #   container_name: web
+  #   restart: unless-stopped
+  #   ports:
+  #     - "${WEB_PORT:-4000}:4000"
+
+  # worker:
+  #   build:
+  #     context: ./Services/worker
+  #     dockerfile: Dockerfile
+  #   container_name: worker
+  #   restart: unless-stopped
+
+  # gateway:
+  #   build:
+  #     context: ./Services/gateway
+  #     dockerfile: Dockerfile
+  #   container_name: gateway
+  #   restart: unless-stopped
+  #   ports:
+  #     - "${GATEWAY_PORT:-80}:80"
